@@ -1,0 +1,31 @@
+
+@import "compass/css3";
+
+.border-bot{
+	background-color: #E9405A;
+	border-bottom: 3px solid #bc364a;
+	&:hover {
+		background-color: #bc364a;
+	}
+}
+	
+.logo-desription {
+	font-size: 13px;
+	padding-top: 0px;
+}
+
+.logo {
+		@include inline-block;
+		padding-top: 20px;
+		padding-bottom: 0px;
+		max-width: 180px;
+}
+
+.nav-text {
+	color: #000;
+}
+
+#menu_nav {
+	z-index: 9999;
+
+}

@@ -2,6 +2,7 @@ require "rubygems"
 require "sinatra"
 require "sinatra/assetpack"
 require "compass"
+require "slim"
 
 
 assets do
@@ -18,6 +19,7 @@ assets do
   ]
 
   js :application, [
+    '/js/jquery.hc-sticky.min.js',
     '/js/app.js'
   ]
 
@@ -27,6 +29,10 @@ end
 set :public_folder, 'assets'
 
 get '/' do
-  erb :index
+  slim :home
+end
+
+get '/template' do 
+  slim :templ
 end
 
