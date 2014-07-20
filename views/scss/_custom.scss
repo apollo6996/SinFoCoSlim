@@ -27,5 +27,8 @@
 
 #menu_nav {
 	z-index: 9999;
+}
 
+#firstModal {
+	@include background(opacity(0.5));
 }

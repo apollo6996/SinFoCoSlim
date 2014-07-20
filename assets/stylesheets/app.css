@@ -10605,3 +10605,8 @@ th.hide-for-touch {
 #menu_nav {
   z-index: 9999;
 }
+
+/* line 32, ../../views/scss/_custom.scss */
+#firstModal {
+  background: opacity(0.5);
+}
