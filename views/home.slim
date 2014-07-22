@@ -1,3 +1,4 @@
+
 doctype html
 html.no-js lang="en" 
   head
@@ -5,6 +6,7 @@ html.no-js lang="en"
     meta content="width=device-width, initial-scale=1.0" name="viewport"
     title Оптика АйВита. Сеть салонов оптики г. Архангельск, г. Северодвинск, г. Мирный Архангельской области
     link rel="stylesheet" href="/stylesheets/app.css"
+    link rel="stylesheet" href="/stylesheets/foundation-icons.css"
     js :modernizr
     js :libs
     js :application
@@ -25,13 +27,19 @@ html.no-js lang="en"
           .large-12.columns 
            div.icon-bar.four-up 
             a.item.nav-text
-              img src="images/start_icon.png" Начало
+              i.fi-play-circle.size-36.icon-lg
+              | начало
             a.item.nav-text
-              img src="images/adress.png" Адреса Салонов
+              i.fi-compass.size-36.icon-lg
+              | адреса салонов
             a.item.nav-text
-              img src="images/start_icon.png" Спецпредложения
+              i.fi-star.size-36.icon-lg
+              | cпецпредложения
             a.item.nav-text
-              img src="images/start_icon.png" Обратный Звонок
+              i.fi-telephone.size-36.icon-lg
+              | обратный звонок
+
+      
 
     .row
       .large-12.columns
@@ -41,31 +49,33 @@ html.no-js lang="en"
         .panel
           <a href="#" data-reveal-id="firstModal" class="medium radius button border-bot"> Запишитесь Сейчас! </a>
 
-          <div id="firstModal" class="reveal-modal" data-reveal>
-            h2 Запись на прием к специалисту.
-            
+          <div id="firstModal" class="reveal-modal small" data-reveal>
+            h3 Запись на прием к специалисту.
+
             p Введите пожалуйста Ваши контактные данные, чтобы мы смогли связаться с Вами.
 
-            form
+            form method="POST" action="/eye_test"
               div.row
                 div.large-12.columns
-                  label 
+                  label for="name" type="text" 
                     | Ваше Имя
-                    input type="text" placeholder="Введите пожалуйста Ваше Имя:"
+                    input type="text" name="eye_test[name]" placeholder="Введите пожалуйста Ваше Имя:"
               div.row
                 div.large-12.columns
-                  label 
+                  label for="phone" type="text" 
                     | Номер телефона
-                    input type="text" placeholder="Укажите Ваш контактный мобильный телефон:"
+                    input type="number" name="eye_test[phone]" placeholder="Укажите Ваш контактный мобильный телефон:"
               div.row
                 div.large-12.columns
-                  label 
+                  label for="showroom" type="text" 
                     | Желаемый салон обслуживания (например, ближайший к Вам)
-                    select
-                      option value="" Галерея, Троицкий д.12, г. Архангельск
-                      option value="" Комсомольский, ул. Комсомольская д.6 г. Архангельск
-                      option value="" ТЦ Плаза, г. Мирный, ул. Циргвава д.8
+                    
+                    select name="eye_test[showroom_index]"
+                      - @showrooms.each do |i|
+                        == "<option value=#{@showrooms.index(i)}>#{i}</option>"
 
+              div.large-12.columns
+                input.medium.radius.button.border-bot.expand type="submit" value="Записаться на бесплатную проверку!" 
 
             <a class="close-reveal-modal">&#215;</a>
           </div>
@@ -136,6 +146,7 @@ html.no-js lang="en"
 
     script  src="/bower_components/jquery/dist/jquery.js"
     script  src="/bower_components/foundation/js/foundation.js"
+    script  src="/bower_components/foundation/js/foundation/foundation.alert.js"
     script  src="/js/jquery.sticky.js"
     script  src="/js/app.js"
 
@@ -144,3 +155,5 @@ html.no-js lang="en"
         $("#menu_nav").sticky({ topSpacing: 0, center:true, className:"hey" });
       });
   
+
+

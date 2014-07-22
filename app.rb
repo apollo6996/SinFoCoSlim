@@ -1,9 +1,24 @@
 require "rubygems"
 require "sinatra"
+require "sinatra/flash"
 require "sinatra/assetpack"
 require "compass"
 require "slim"
+require "./eye_test"
 
+enable :sessions
+
+helpers do 
+
+  def set_showrooms
+    @showrooms = [
+      "ТЦ Галерея, Троицкий д.12, г. Архангельск",
+      "Комсомольский, ул. Комсомольская д.6 г. Архангельск",
+      "ТЦ Плаза, г. Мирный, ул. Циргвава д.8"
+    ]
+  end
+
+end
 
 assets do
   serve '/js', from: 'js'
@@ -24,6 +39,10 @@ assets do
   ]
 
   js_compression :jsmin
+end
+
+before do 
+  set_showrooms
 end
 
 set :public_folder, 'assets'

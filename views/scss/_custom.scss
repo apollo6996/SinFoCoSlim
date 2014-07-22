@@ -1,6 +1,9 @@
 
 @import "compass/css3";
 
+$icon-bar-icon-size: 36px;
+
+
 .border-bot{
 	background-color: #E9405A;
 	border-bottom: 3px solid #bc364a;
@@ -31,4 +34,27 @@
 
 #firstModal {
 	@include background(opacity(0.5));
+}
+
+i {
+	&.icon-lg{
+		font-size: 36px;
+	}
+	&.icon-md {
+		font-size: 24px;
+  	}
+  	&.icon-sm {
+  		font-size: 21px;
+  	}
+
+}
+
+
+.flash {
+  width: 600px;
+  padding: 5px;
+  font-weight: bold;
+  margin: 20px;
+  background: lighten(#E9405A, 60%);
+  color: #E9405A
 }
