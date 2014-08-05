@@ -15,42 +15,41 @@ html.no-js lang="en"
 
   body
     header
-      .row
-        .medium-7.medium-offset-5.columns
-          a href="#" 
-            img.logo src="images/logo.png"          
-      .row
-        .medium-7.medium-offset-5.columns
-          h6.logo-desription Оптики Архангельской области
-      .row id="menu_nav" 
-        nav 
-          .large-12.columns 
-           div.icon-bar.four-up 
-            a.item.nav-text
-              i.fi-play-circle.size-36.icon-lg
-              | начало
-            a.item.nav-text
-              i.fi-compass.size-36.icon-lg
-              | адреса салонов
-            a.item.nav-text
-              i.fi-star.size-36.icon-lg
-              | cпецпредложения
-            a.item.nav-text
-              i.fi-telephone.size-36.icon-lg
-              | обратный звонок
+      == slim :header
+      == slim :nav_big
 
-      
+    .row#testers
+      .large-12.columns
+        <center>
+        == slim :eye_testers
+        </center>
 
     .row
-      .large-12.columns
-        h1 Welcome to Foundation
+      .large-8.columns
+        == slim :sales
+
+      .large-4.columns
+        h2 Наши Контакты
+
     .row
       .large-12.columns
         .panel
           <a href="#" data-reveal-id="firstModal" class="medium radius button border-bot"> Запишитесь Сейчас! </a>
 
-          <div id="firstModal" class="reveal-modal small" data-reveal>
-            h3 Запись на прием к специалисту.
+
+          /! ********** EYE TESTER SIGN UP MODAL ********
+          == slim :signup_eyetesters
+
+
+          <div id="myModal">
+
+          </div>
+
+
+          /! ********** CALL ME BACK MODAL *****************
+
+          <div id="callmebackModal" class="reveal-modal small" data-reveal>
+            h3 ОБРАТНЫЙ ЗВОНОК
 
             p Введите пожалуйста Ваши контактные данные, чтобы мы смогли связаться с Вами.
 
@@ -79,6 +78,10 @@ html.no-js lang="en"
 
             <a class="close-reveal-modal">&#215;</a>
           </div>
+
+
+
+
 
           h3 We&rsquo;re stoked you want to try Foundation!
           p To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.
@@ -148,12 +151,6 @@ html.no-js lang="en"
     script  src="/bower_components/foundation/js/foundation.js"
     script  src="/bower_components/foundation/js/foundation/foundation.alert.js"
     script  src="/js/jquery.sticky.js"
+    script  src="/js/addons.js"
     script  src="/js/app.js"
-
-    javascript:
-      $(window).load(function(){
-        $("#menu_nav").sticky({ topSpacing: 0, center:true, className:"hey" });
-      });
-  
-
 

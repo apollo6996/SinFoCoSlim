@@ -12,10 +12,22 @@ helpers do
 
   def set_showrooms
     @showrooms = [
-      "ТЦ Галерея, Троицкий д.12, г. Архангельск",
-      "Комсомольский, ул. Комсомольская д.6 г. Архангельск",
-      "ТЦ Плаза, г. Мирный, ул. Циргвава д.8"
+      "ТЦ Галерея, Троицкий д.10, г. Архангельск",
+      "Комсомольский, ул. Комсомольская д.6, г. Архангельск",
+      "ТЦ Маяк, Никольский проспект, 35, г. Архангельск",
+      "г. Мирный, ТЦ Плаза, ул. Циргвава д.8",
+      "г. Северодвинск, ТЦ Сити, Морской проспект д.70"
     ]
+  end
+
+  def set_short_showrooms
+    @short_showrooms = {
+      @showrooms[0] => "Галерея",
+      @showrooms[1] => "Комсомольский",
+      @showrooms[2] => "Маяк",
+      @showrooms[3] => "Плаза",
+      @showrooms[4] => "Сити"
+    }
   end
 
 end
@@ -43,12 +55,18 @@ end
 
 before do 
   set_showrooms
+  set_short_showrooms
+  show_testers
 end
 
 set :public_folder, 'assets'
 
 get '/' do
   slim :home
+end
+
+get '/getsignupform' do
+  slim :signup_body
 end
 
 get '/template' do 

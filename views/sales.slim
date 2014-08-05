@@ -1,0 +1,11 @@
+h2 Спецпредложения
+p Выберите пожалуйста салон, чтобы увидеть проходящие в нем акции и спецпредложения
+<ul class="tabs" data-tab>
+  - i = 1
+  - @short_showrooms.each do |key, value|
+      - if i == 1
+        == "<li class='tab-title active'><a href='#panel2-#{i}'>#{value}</a>"
+      - else
+        == "<li class='tab-title'><a href='#panel2-#{i}'>#{value}</a>"
+      - i+=1
+</ul>

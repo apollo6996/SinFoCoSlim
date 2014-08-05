@@ -28,19 +28,15 @@ end
 
 helpers EyeTestHelpers
 
-post '/eye_test' do 	
-	
-flash[:notice] = "Успешно!"
-	if signup	
-
-	  redirect to("/")
-	  
+post '/eye_test' do 
+	if signup
+		redirect to ("/")
 	end
 end
 
 get '/eye_testers' do
   show_testers
-  slim :eye_testers
+  slim :show_testers
 end
 
 get '/eye_testers/:id' do
@@ -49,5 +45,7 @@ end
 
 delete '/eye_testers/:id' do 
   EyeTest.get(params[:id]).destroy
-  redirect to ("/eye_testers")
+  redirect to ("/")
 end
+
+

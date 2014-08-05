@@ -4,6 +4,78 @@
 		"selected_items":
 		[
 			[
+				"re",
+				"redirect"
+			],
+			[
+				"Ком",
+				"Комсомольский"
+			],
+			[
+				"i",
+				"if	if … end"
+			],
+			[
+				"do",
+				"dob	Insert do |variable| … end"
+			],
+			[
+				"get",
+				"getAJAX"
+			],
+			[
+				"ge",
+				"getElementById"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"Ey",
+				"EyeTestHelpers"
+			],
+			[
+				"eye",
+				"eye_test"
+			],
+			[
+				"E",
+				"EyeTest"
+			],
+			[
+				"pa",
+				"padding-top: "
+			],
+			[
+				"pad",
+				"padding-bottom: "
+			],
+			[
+				"padd",
+				"padding-top: "
+			],
+			[
+				"le",
+				"letter-spacing: "
+			],
+			[
+				"fo",
+				"font-variant: "
+			],
+			[
+				"font",
+				"font-size: "
+			],
+			[
+				"wi",
+				"max-width: "
+			],
+			[
+				"in",
+				"inline-block	Compass"
+			],
+			[
 				"ba",
 				"background-color: "
 			],
@@ -80,58 +152,59 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/Vault/RubyProjects/sinatra/sinatra_assetpack_foundation_sample/app.rb",
+			"file": "views/home.slim",
 			"settings":
 			{
-				"buffer_size": 497,
+				"buffer_size": 5663,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "bower_components/foundation/scss/foundation/components/_buttons.scss",
+			"file": "views/sales.slim",
 			"settings":
 			{
-				"buffer_size": 8010,
+				"buffer_size": 380,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "assets/stylesheets/app.css",
+			"file": "views/show_testers.slim",
 			"settings":
 			{
-				"buffer_size": 268775,
+				"buffer_size": 813,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "views/index.erb",
+			"file": "app.rb",
 			"settings":
 			{
-				"buffer_size": 6552,
+				"buffer_size": 1120,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "config.rb",
+			"file": "eye_test.rb",
 			"settings":
 			{
-				"buffer_size": 916,
-				"line_ending": "Unix"
+				"buffer_size": 821,
+				"line_ending": "Unix",
+				"name": "require"
 			}
 		},
 		{
 			"file": "views/scss/_custom.scss",
 			"settings":
 			{
-				"buffer_size": 149,
+				"buffer_size": 705,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "views/scss/app.scss",
+			"file": "js/app.js",
 			"settings":
 			{
-				"buffer_size": 1491,
+				"buffer_size": 374,
 				"line_ending": "Unix"
 			}
 		}
@@ -188,9 +261,29 @@
 	},
 	"file_history":
 	[
-		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/bower_components/foundation/scss/foundation/_settings.scss",
-		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/bower_components/foundation/scss/foundation/components/_clearing.scss",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/sales",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/show_testers.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/eye_testers.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/Gemfile",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/header.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/nav_big.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/signup_eyetesters.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/layout.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/bower_components/foundation/scss/foundation/components/_icon-bar.scss",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/config.rb",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/scss/app.scss",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/templ.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/scss/fontawesome/_core.scss",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/js/app.js",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/assets/stylesheets/app.css",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/.git/COMMIT_EDITMSG",
 		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/bower_components/foundation/scss/foundation/components/_global.scss",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/bower_components/foundation/js/foundation.js",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/bower_components/foundation/scss/foundation/_settings.scss",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/index2.erb",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/bower_components/foundation/scss/foundation/components/_buttons.scss",
+		"/Users/Vault/RubyProjects/sinatra/sinatra_assetpack_foundation_sample/app.rb",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/bower_components/foundation/scss/foundation/components/_clearing.scss",
 		"/Users/Vault/RubyProjects/sinatra/sinatra_assetpack_foundation_sample/README.md",
 		"/Users/Vault/RubyProjects/sinatra/sinatra_assetpack_foundation_sample/views/index.erb",
 		"/Users/Vault/RubyProjects/sinatra/sinatra_assetpack_foundation_sample/config.rb",
@@ -287,6 +380,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"icon-bar",
+			"icon-bar-icon-size",
+			"icon-size",
+			"$icon-bar-icon-size",
+			"$icon-size",
+			"$icon-bar-icon-size",
+			"font",
 			"#007095",
 			"$primary-color",
 			"008cba",
@@ -397,6 +497,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"",
 			"ccc",
 			"1968c5",
 			"4C64D5",
@@ -433,23 +534,113 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/Vault/RubyProjects/sinatra/sinatra_assetpack_foundation_sample/app.rb",
+					"file": "views/home.slim",
 					"settings":
 					{
-						"buffer_size": 497,
+						"buffer_size": 5663,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								18,
-								18
+								405,
+								405
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "views/sales.slim",
+					"settings":
+					{
+						"buffer_size": 380,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								139,
+								139
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "views/show_testers.slim",
+					"settings":
+					{
+						"buffer_size": 813,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								284,
+								284
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "app.rb",
+					"settings":
+					{
+						"buffer_size": 1120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								979,
+								979
 							]
 						],
 						"settings":
@@ -465,113 +656,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "bower_components/foundation/scss/foundation/components/_buttons.scss",
-					"settings":
-					{
-						"buffer_size": 8010,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								929,
-								929
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 71.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "assets/stylesheets/app.css",
-					"settings":
-					{
-						"buffer_size": 268775,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								268408,
-								268408
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 2.0,
-						"translation.y": 120220.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "views/index.erb",
-					"settings":
-					{
-						"buffer_size": 6552,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5763,
-								5763
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/ERB Autocomplete/erb.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2227.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
 					"buffer": 4,
-					"file": "config.rb",
+					"file": "eye_test.rb",
 					"settings":
 					{
-						"buffer_size": 916,
+						"buffer_size": 821,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								186,
-								186
+								821,
+								821
 							]
 						],
 						"settings":
 						{
+							"auto_name": "require",
 							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -585,21 +687,22 @@
 					"file": "views/scss/_custom.scss",
 					"settings":
 					{
-						"buffer_size": 149,
+						"buffer_size": 705,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								131,
-								131
+								702,
+								702
 							]
 						],
 						"settings":
 						{
 							"auto_name": "",
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -609,23 +712,23 @@
 				},
 				{
 					"buffer": 6,
-					"file": "views/scss/app.scss",
+					"file": "js/app.js",
 					"settings":
 					{
-						"buffer_size": 1491,
+						"buffer_size": 374,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								59,
-								59
+								359,
+								359
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -664,7 +767,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.530983944714,
 			1.0
 		],
 		"rows":
