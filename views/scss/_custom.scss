@@ -3,6 +3,15 @@
 
 $icon-bar-icon-size: 36px;
 
+a.nav-text {
+	&:hover {
+		color: #fff;
+	}
+}
+
+.bg_white {
+	background-color: #fff;
+}
 
 .border-bot{
 	background-color: #E9405A;
@@ -19,17 +28,22 @@ $icon-bar-icon-size: 36px;
 
 .logo {
 		@include inline-block;
-		padding-top: 20px;
-		padding-bottom: 0px;
-		max-width: 180px;
+		padding-top: 5px;
+		padding-bottom: 10px;
+		max-width: 190px;
 }
 
 .nav-text {
 	color: #000;
 }
 
+.border {
+	border-bottom: 1px solid #ccc;
+}
+
 #menu_nav {
 	z-index: 9999;
+	
 }
 
 #firstModal {

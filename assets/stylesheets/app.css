@@ -3848,14 +3848,14 @@ label.error {
   color: #f04124;
 }
 
-/* line 196, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 195, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar {
   width: 100%;
   font-size: 0;
   display: inline-block;
-  background: rgba(255, 255, 255, 0.79);
+  background: white;
 }
-/* line 41, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 40, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar > * {
   text-align: center;
   font-size: 1rem;
@@ -3865,121 +3865,121 @@ label.error {
   padding: 1.25rem;
   float: left;
 }
-/* line 50, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 49, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar > * i, .icon-bar > * img {
   display: block;
   margin: 0 auto;
 }
-/* line 54, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 53, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar > * i + label, .icon-bar > * img + label {
   margin-top: .0625rem;
 }
-/* line 59, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 58, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar > * i {
   font-size: 1.875rem;
   vertical-align: middle;
 }
-/* line 64, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 63, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar > * img {
   width: 100%;
   height: 100%;
 }
-/* line 72, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 71, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar.label-right > * i, .icon-bar.label-right > * img {
   margin: 0 .0625rem 0 0;
   display: inline-block;
 }
-/* line 76, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 75, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar.label-right > * i + label, .icon-bar.label-right > * img + label {
   margin-top: 0;
 }
-/* line 81, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 80, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar.label-right > * label {
   display: inline-block;
 }
-/* line 84, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 83, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar.vertical.label-right > * {
   text-align: left;
 }
-/* line 88, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 87, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar.vertical {
   height: 100%;
   width: auto;
 }
-/* line 92, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 91, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar.vertical .item {
   width: auto;
   margin: auto;
   float: none;
 }
-/* line 111, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 110, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar > * {
   font-size: 1rem;
   padding: 1.25rem;
 }
-/* line 117, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 116, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar > * i + label, .icon-bar > * img + label {
   margin-top: .0625rem;
 }
-/* line 122, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 121, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar > * i {
   font-size: 1.875rem;
 }
-/* line 126, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 125, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar > * img {
   width: 100%;
   height: 100%;
 }
-/* line 155, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 154, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar > *:hover {
-  background: #dbe4f4;
+  background: #00befa;
 }
-/* line 157, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 156, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar > * label {
   color: black;
 }
-/* line 159, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 158, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar > * i {
   color: black;
 }
 
-/* line 211, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 210, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar.two-up .item {
   width: 50%;
 }
-/* line 212, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 211, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar.two-up.vertical .item {
   width: auto;
 }
-/* line 215, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 214, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar.three-up .item {
   width: 33.3333%;
 }
-/* line 216, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 215, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar.three-up.vertical .item {
   width: auto;
 }
-/* line 219, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 218, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar.four-up .item {
   width: 25%;
 }
-/* line 220, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 219, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar.four-up.vertical .item {
   width: auto;
 }
-/* line 223, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 222, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar.five-up .item {
   width: 20%;
 }
-/* line 224, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 223, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar.five-up.vertical .item {
   width: auto;
 }
-/* line 227, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 226, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar.six-up .item {
   width: 16.66667%;
 }
-/* line 228, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
+/* line 227, ../../bower_components/foundation/scss/foundation/components/_icon-bar.scss */
 .icon-bar.six-up.vertical .item {
   width: auto;
 }
@@ -8057,22 +8057,32 @@ th.hide-for-touch {
   }
 }
 /* line 7, ../../views/scss/_custom.scss */
+a.nav-text:hover {
+  color: #fff;
+}
+
+/* line 12, ../../views/scss/_custom.scss */
+.bg_white {
+  background-color: #fff;
+}
+
+/* line 16, ../../views/scss/_custom.scss */
 .border-bot {
   background-color: #E9405A;
   border-bottom: 3px solid #bc364a;
 }
-/* line 10, ../../views/scss/_custom.scss */
+/* line 19, ../../views/scss/_custom.scss */
 .border-bot:hover {
   background-color: #bc364a;
 }
 
-/* line 15, ../../views/scss/_custom.scss */
+/* line 24, ../../views/scss/_custom.scss */
 .logo-desription {
   font-size: 13px;
   padding-top: 0px;
 }
 
-/* line 20, ../../views/scss/_custom.scss */
+/* line 29, ../../views/scss/_custom.scss */
 .logo {
   display: -moz-inline-stack;
   display: inline-block;
@@ -8080,40 +8090,45 @@ th.hide-for-touch {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  padding-top: 20px;
-  padding-bottom: 0px;
-  max-width: 180px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  max-width: 190px;
 }
 
-/* line 27, ../../views/scss/_custom.scss */
+/* line 36, ../../views/scss/_custom.scss */
 .nav-text {
   color: #000;
 }
 
-/* line 31, ../../views/scss/_custom.scss */
+/* line 40, ../../views/scss/_custom.scss */
+.border {
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 44, ../../views/scss/_custom.scss */
 #menu_nav {
   z-index: 9999;
 }
 
-/* line 35, ../../views/scss/_custom.scss */
+/* line 49, ../../views/scss/_custom.scss */
 #firstModal {
   background: opacity(0.5);
 }
 
-/* line 40, ../../views/scss/_custom.scss */
+/* line 54, ../../views/scss/_custom.scss */
 i.icon-lg {
   font-size: 36px;
 }
-/* line 43, ../../views/scss/_custom.scss */
+/* line 57, ../../views/scss/_custom.scss */
 i.icon-md {
   font-size: 24px;
 }
-/* line 46, ../../views/scss/_custom.scss */
+/* line 60, ../../views/scss/_custom.scss */
 i.icon-sm {
   font-size: 21px;
 }
 
-/* line 53, ../../views/scss/_custom.scss */
+/* line 67, ../../views/scss/_custom.scss */
 .flash {
   width: 100%;
   padding: 5px;
