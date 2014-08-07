@@ -10,4 +10,5 @@ gem "data_mapper"
 gem "dm-core"
 gem "dm-migrations"
 gem "sinatra-flash"
+gem "font-awesome-sass"
 #gem "dm-sqlite-adapter", :group => :development

@@ -5,6 +5,7 @@ require "sinatra/assetpack"
 require "compass"
 require "slim"
 require "./eye_test"
+require "font-awesome-sass"
 
 enable :sessions
 

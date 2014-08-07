@@ -20,16 +20,16 @@ function formRestore () {
   });
 };
 
-function prevent () {
-  $('#eyeForm').submit(function(event) {
+function prevent (form) {
+  $(form).submit(function(event) {
   event.preventDefault()
   }); // End of submit event
 };
 
-function eyeFormAJAX () {
-  prevent();
-  var url = $("#eyeForm").attr("action");
-  var formData = $('#eyeForm').serialize();
+function eyeFormAJAX (form) {
+  prevent(form);
+  var url = $(form).attr("action");
+  var formData = $(form).serialize();
     $.ajax(url, {
       type :    "POST",
       data :    formData,
