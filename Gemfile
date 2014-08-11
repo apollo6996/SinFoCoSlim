@@ -9,6 +9,7 @@ gem "sqlite3"
 gem "data_mapper"
 gem "dm-core"
 gem "dm-migrations"
+gem "sinatra-subdomain"
 gem "sinatra-flash"
 gem "font-awesome-sass"
 #gem "dm-sqlite-adapter", :group => :development

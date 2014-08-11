@@ -4,10 +4,33 @@ require "sinatra/flash"
 require "sinatra/assetpack"
 require "compass"
 require "slim"
+require "sinatra/subdomain"
 require "./eye_test"
 require "font-awesome-sass"
 
 enable :sessions
+
+subdomain :shop do
+  get '/template' do
+    slim :templ
+  end
+end
+
+subdomain :admin do
+  get '/eye_test' do
+    slim :show_testers
+  end
+end
+
+subdomain do
+  get '/template' do
+    slim :templ
+  end
+  get '/eye_test' do
+    slim :show_testers
+  end
+end
+
 
 helpers do 
 
@@ -67,7 +90,7 @@ get '/' do
 end
 
 get '/getsignupform' do
-  slim :signup_body
+  slim :eyetest_form
 end
 
 get '/template' do 

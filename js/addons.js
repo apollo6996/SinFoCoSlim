@@ -15,7 +15,7 @@ function formRestore () {
     type: 'GET',
     cache: false,
     success: function () {
-      $('#firstModal').load('/getsignupform');
+      $(thisModal).load('/getsignupform');
     }
   });
 };
@@ -26,15 +26,16 @@ function prevent (form) {
   }); // End of submit event
 };
 
-function eyeFormAJAX (form) {
+function FormAJAX (form, modal) {
   prevent(form);
+  thisModal = modal;
   var url = $(form).attr("action");
   var formData = $(form).serialize();
     $.ajax(url, {
       type :    "POST",
       data :    formData,
       success : function () {
-        $('#firstModal').html('<p class="flash">Спасибо! Ваша заявка принята!</p>' 
+        $(thisModal).html('<p class="flash">Спасибо! Ваша заявка принята!</p>' 
                               + '<a class="close-reveal-modal">&#215;</a>'
                               ); 
         $('#testers').load('/eye_testers');

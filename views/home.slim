@@ -10,8 +10,6 @@ html.no-js lang="en"
     
     link rel="stylesheet" href="/stylesheets/flexy-menu.css"
     
-
-
   body
     header
       == slim :nav_alt 
@@ -36,11 +34,9 @@ html.no-js lang="en"
 
 
           /! ********** EYE TESTER SIGN UP MODAL ********
-          == slim :signup_eyetesters
-
-
-
-
+          <div id="firstModal" class="reveal-modal small" data-reveal>
+            == slim :eyetest_form
+          </div>
 
           /! ********** CALL ME BACK MODAL *****************
 
@@ -95,51 +91,6 @@ html.no-js lang="en"
               p
                 a href="http://twitter.com/foundationzurb"  @foundationzurb
                 | Ping do us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).
-
-    <ul class="example-orbit" data-orbit>
-      <li>
-        <img src="../assets/img/examples/satelite-orbit.jpg" alt="slide 1" />
-        <div class="orbit-caption">
-          Caption One.
-        </div>
-      </li>
-      <li class="active">
-        <img src="../assets/img/examples/andromeda-orbit.jpg" alt="slide 2" />
-        <div class="orbit-caption">
-          Caption Two.
-        </div>
-      </li>
-      <li>
-        <img src="../assets/img/examples/launch-orbit.jpg" alt="slide 3" />
-        <div class="orbit-caption">
-          Caption Three.
-        </div>
-      </li>
-    </ul>
-
-
-      .row
-        .large-12.columns
-          h1 Welcome to Foundation
-      .row
-        .large-12.columns
-          .panel
-            h3 We&rsquo;re stoked you want to try Foundation!
-            p To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.
-            p Once you've exhausted the fun in this document, you should check out:
-            .row
-              .large-4.medium-4.columns
-                p
-                  a href="http://foundation.zurb.com/docs"  Foundation Documentation 
-                  | Everything you need to know about using the framework.
-              .large-4.medium-4.columns
-                p
-                  a href="http://github.com/zurb/foundation"  Foundation on Github  
-                  | Latest code, issue reports, feature requests and more.
-              .large-4.medium-4.columns
-                p
-                  a href="http://twitter.com/foundationzurb"  @foundationzurb
-                  | Ping do us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).
 
 
 
