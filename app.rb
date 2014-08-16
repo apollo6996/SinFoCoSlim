@@ -4,33 +4,11 @@ require "sinatra/flash"
 require "sinatra/assetpack"
 require "compass"
 require "slim"
-require "sinatra/subdomain"
 require "./eye_test"
+require "./call_me_back"
 require "font-awesome-sass"
 
 enable :sessions
-
-subdomain :shop do
-  get '/template' do
-    slim :templ
-  end
-end
-
-subdomain :admin do
-  get '/eye_test' do
-    slim :show_testers
-  end
-end
-
-subdomain do
-  get '/template' do
-    slim :templ
-  end
-  get '/eye_test' do
-    slim :show_testers
-  end
-end
-
 
 helpers do 
 
@@ -54,7 +32,48 @@ helpers do
     }
   end
 
+  def set_contacts
+    @contacts = [
+      {},
+      { name:   '"Галерея"',
+        city:   "г. Архангельск",
+        adress: 'Троицкий проспект д.10, ТЦ "Галерея", <br> 2 этаж',
+        phone:  "+7 911 552-40-80",
+        email:  "gallery@eyevita.ru"
+      },
+
+      { name:   '"Комсомольский"',
+        city:   "г. Архангельск",
+        adress: "ул. Комсомольская д.6, 2 этаж, <br> вход через крыльцо 'Петровский'",
+        phone:  "+7 911 552-40-80",
+        email:  "k6@eyevita.ru"
+      },
+
+      { name:   '"Маяк"',
+        city:   "г. Архангельск",
+        adress: 'Никольский проспект, 35, ТЦ "Маяк"',
+        phone:  "+7 911 552-40-80",
+        email:  "mayak@eyevita.ru"
+      },
+
+      { name:   '"Плаза"',
+        city:   "г. Мирный",
+        adress: 'ул. Циргвава д.8, ТЦ "Плаза"',
+        phone:  "+7 911 552-40-80",
+        email:  "plaza@eyevita.ru"
+      },
+
+      { name:   '"Сити"',
+        city:   "г. Северодвинск",
+        adress: 'Морской проспект д.70, ТЦ "Сити"',
+        phone:  "+7 911 552-40-80",
+        email:  "city@eyevita.ru"
+      }
+    ]
+  end
+
 end
+
 
 assets do
   serve '/js', from: 'js'
@@ -81,6 +100,8 @@ before do
   set_showrooms
   set_short_showrooms
   show_testers
+  show_callbacks_requests
+  set_contacts
 end
 
 set :public_folder, 'assets'
@@ -89,8 +110,16 @@ get '/' do
   slim :home
 end
 
-get '/getsignupform' do
+get '/geteyetest_form' do
   slim :eyetest_form
+end
+
+get '/getcallmeback_form' do
+  slim :callmeback_form
+end
+
+get '/thankyou' do
+  slim :ty
 end
 
 get '/template' do 

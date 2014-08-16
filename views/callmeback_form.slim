@@ -1,8 +1,8 @@
-h3 Запись на прием к специалисту.
+h3 Обратный звонок.
 
 p Введите пожалуйста Ваши контактные данные, чтобы мы смогли связаться с Вами.
 
-form id="eyeForm" method="POST" action="/eye_test"
+form id="callMeBackForm" method="POST" action="/call_me_back"
   div.row
     div.large-12.columns
       label for="name" type="text" 
@@ -13,16 +13,7 @@ form id="eyeForm" method="POST" action="/eye_test"
       label for="phone" type="text" 
         | Номер телефона
         input type="number" name="eye_test[phone]" placeholder="Укажите Ваш контактный мобильный телефон:"
-  div.row
-    div.large-12.columns
-      label for="showroom" type="text" 
-        | Желаемый салон обслуживания (например, ближайший к Вам)
-        
-        select name="eye_test[showroom_index]"
-          - @showrooms.each do |i|
-            == "<option value=#{@showrooms.index(i)}>#{i}</option>"
-
   div.large-12.columns
-    input.medium.radius.button.border-bot.expand onclick="FormAJAX(eyeForm, firstModal)" type="submit" value="Записаться на бесплатную проверку!" 
+    input.medium.radius.button.border-bot.expand onclick="FormAJAX(callMeBackForm, callmebackModal)" type="submit" value="Записаться на бесплатную проверку!" 
 
 <a class="close-reveal-modal">&#215;</a>

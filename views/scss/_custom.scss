@@ -1,6 +1,9 @@
 
 @import "compass/css3";
 
+$default-text-shadow-color: rgba(black, 0.7);
+$default-text-shadow-v-offset: 1px;
+
 $icon-bar-icon-size: 36px;
 
 a.nav-text {
@@ -9,11 +12,20 @@ a.nav-text {
 	}
 }
 
+span.fn {
+  color: #008cba;
+}
+
+li.fn {
+  padding-bottom: 10px;
+}
+
 .bg_white {
 	background-color: #fff;
 }
 
 .border-bot{
+  @include single-text-shadow;
 	background-color: #E9405A;
 	border-bottom: 3px solid #bc364a;
 	&:hover {
@@ -62,11 +74,91 @@ i {
 }
 
 
-.flash {
+#full-width-slider {
   width: 100%;
-  padding: 5px;
-  font-weight: bold;
-  margin: 20px;
-  background: lighten(#E9405A, 60%);
-  color: #E9405A
+  color: #000;
+
+  a.medium.radius.button.border-bot {
+    left: 21%;
+  }
+
+  .infoBlock {
+    position: absolute;
+    top: 40px;
+    left: auto;
+    padding-bottom: 0;
+    background: #FFF;
+    background: rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    padding: 50px;
+}
+  .infoBlockLeftBlack {
+    color: #FFF;
+    background: #000;
+    background: rgba(0,0,0,0.35);
+    left: 60%;
+    right: auto;
+    div.rsContent {
+      left: 60%;
+    }
+}
+  .infoBlock h4 {
+    @include single-text-shadow;
+    color: #fff;
+    font-size: 40px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 3px;
+}
+  .infoBlock h3 {
+    @include single-text-shadow;
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 0;
+    text-align: center;
+}
+  .infoBlock p {
+    @include single-text-shadow;
+    font-size: 16px;
+    margin: 4px 0 0;
+    padding-bottom: 20px;
+    text-align: center;
+}
+}
+
+
+@media screen and (min-width:960px) and (min-height:660px) {
+  .heroSlider .rsOverflow,
+  .royalSlider.heroSlider {
+      height: 520px !important;
+  }
+}
+
+@media screen and (min-width:960px) and (min-height:1000px) {
+    .heroSlider .rsOverflow,
+    .royalSlider.heroSlider {
+        height: 660px !important;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  .royalSlider.heroSlider,
+  .royalSlider.heroSlider .rsOverflow {
+    height: 300px !important;
+  }
+  .infoBlock {
+    padding: 10px;
+    height: auto;
+    max-height: 100%;
+    min-width: 40%;
+    left: 5px;
+    top: 5px;
+    right: auto;
+    font-size: 12px;
+  }
+  .infoBlock h3 {
+     font-size: 14px;
+     line-height: 17px;
+  }
 }

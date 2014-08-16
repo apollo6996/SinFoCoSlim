@@ -7,12 +7,24 @@ html.no-js lang="en"
     title Оптика АйВита. Сеть салонов оптики г. Архангельск, г. Северодвинск, г. Мирный Архангельской области
     link rel="stylesheet" href="/stylesheets/app.css"
     link rel="stylesheet" href="/stylesheets/foundation-icons.css"
-    
+    link rel="stylesheet" href="/stylesheets/royalslider.css"
+    link rel="stylesheet" href="/stylesheets/RSskins/minimal-white/rs-minimal-white.css"
     link rel="stylesheet" href="/stylesheets/flexy-menu.css"
     
   body
     header
       == slim :nav_alt 
+
+    div#full-width-slider.royalSlider.heroSlider.rsMinW
+      div.rsContent
+        img.rsImg src="/images/eyetest.jpg"
+        div.infoBlock.infoBlockLeftBlack.rsABlock data-fade-effect="" data-move-offset="10" data-move-effect="bottom" data-speed="200"
+          h4 БЕСПЛАТНАЯ 
+          h3 ПРОВЕРКА ЗРЕНИЯ!
+          p Диагностика проводится на современном оборудовании квалифицированными специалистами.
+          a.medium.radius.button.border-bot href="#" data-reveal-id="firstModal" <i class="fa fa-sign-in"> &nbsp</i> Запишитесь Сейчас!
+
+    hr
 
     .row#testers
       .large-12.columns
@@ -21,16 +33,14 @@ html.no-js lang="en"
         </center>
 
     .row
-      .large-8.columns
+      .large-12.columns
+        hr
         == slim :sales
-
-      .large-4.columns
-        h2 Наши Контакты
 
     .row
       .large-12.columns
         .panel
-          a.medium.radius.button.border-bot href="#" data-reveal-id="firstModal" <i class="fa fa-sign-in"> &nbsp</i> Запишитесь Сейчас!
+          
 
 
           /! ********** EYE TESTER SIGN UP MODAL ********
@@ -41,38 +51,8 @@ html.no-js lang="en"
           /! ********** CALL ME BACK MODAL *****************
 
           <div id="callmebackModal" class="reveal-modal small" data-reveal>
-            h3 ОБРАТНЫЙ ЗВОНОК
-
-            p Введите пожалуйста Ваши контактные данные, чтобы мы смогли связаться с Вами.
-
-            form method="POST" action="/eye_test"
-              div.row
-                div.large-12.columns
-                  label for="name" type="text" 
-                    | Ваше Имя
-                    input type="text" name="eye_test[name]" placeholder="Введите пожалуйста Ваше Имя:"
-              div.row
-                div.large-12.columns
-                  label for="phone" type="text" 
-                    | Номер телефона
-                    input type="number" name="eye_test[phone]" placeholder="Укажите Ваш контактный мобильный телефон:"
-              div.row
-                div.large-12.columns
-                  label for="showroom" type="text" 
-                    | Желаемый салон обслуживания (например, ближайший к Вам)
-                    
-                    select name="eye_test[showroom_index]"
-                      - @showrooms.each do |i|
-                        == "<option value=#{@showrooms.index(i)}>#{i}</option>"
-
-              div.large-12.columns
-                input.medium.radius.button.border-bot.expand type="submit" value="Записаться на бесплатную проверку!" 
-
-            <a class="close-reveal-modal">&#215;</a>
+            == slim :callmeback_form
           </div>
-
-
-
 
 
           h3 We&rsquo;re stoked you want to try Foundation!
@@ -99,8 +79,11 @@ html.no-js lang="en"
     script  src="/bower_components/foundation/js/foundation.js"
     script  src="/bower_components/foundation/js/foundation/foundation.alert.js"
     script  src="/js/jquery.sticky.js"
-    script  src="/js/addons.js"
     script  src="/js/flexy-menu.js"
+    script  src="/js/jquery.royalslider.min.js"
+    script  src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full" data-id="dgLoader"
+    script  src="/js/addons.js"
     script  src="/js/app.js"
     script  src="/js/modernizr.custom.50878.js"
+
 

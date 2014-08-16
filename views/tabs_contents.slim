@@ -1,0 +1,17 @@
+.row
+  .large-6.columns
+    ul.no-bullet
+      li=="<h3> Салон #{@contacts[i][:name]} </h3>"
+      li=="<h4 class='subheader'> #{@contacts[i][:city]} </h4>"
+      li=="<p> #{@contacts[i][:adress]}"
+      li.fn=="Тел: <span class='fn'>#{@contacts[i][:phone]}</span>"
+      li=="Email: <span class='fn'>#{@contacts[i][:email]}</span>"
+    a.small.button.success.radius href="#" data-reveal-id="callmebackModal" Позвонить Мне!
+
+  .large-6.columns
+    .panel.callout.radius
+      div id="map" style="width:300px; height:260px"
+
+
+
+          

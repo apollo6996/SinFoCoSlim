@@ -1,11 +1,51 @@
-h2 Спецпредложения
-p Выберите пожалуйста салон, чтобы увидеть проходящие в нем акции и спецпредложения
-<ul class="tabs" data-tab>
+h2 Адреса Салонов 
+p Выберите пожалуйста салон из вкладок ниже:
+<ul class="tabs vertical" data-tab>
   - i = 1
   - @short_showrooms.each do |key, value|
       - if i == 1
-        == "<li class='tab-title active'><a href='#panel2-#{i}'>#{value}</a>"
+        == "<li class='tab-title active'><a href='#panel2-#{i}'><i class='fa fa-dot-circle-o'></i> &nbsp#{value}</a>"
       - else
-        == "<li class='tab-title'><a href='#panel2-#{i}'>#{value}</a>"
+        == "<li class='tab-title'><a href='#panel2-#{i}'><i class='fa fa-dot-circle-o'></i> &nbsp #{value}</a>"
       - i+=1
 </ul>
+
+
+- count = @contacts.length - 1
+.tabs-content.vertical
+  - (1..count).each do | i |
+    -if i == 1
+      =="<div id='panel2-#{i}' class='content active'>"
+      .row
+        .large-6.columns
+          ul.no-bullet
+            li=="<h3> Салон #{@contacts[i][:name]} </h3>"
+            li=="<h4 class='subheader'> #{@contacts[i][:city]} </h4>"
+            li=="<p> #{@contacts[i][:adress]}"
+            li.fn=="Тел: <span class='fn'>#{@contacts[i][:phone]}</span>"
+            li=="Email: <span class='fn'>#{@contacts[i][:email]}</span>"
+          a.small.button.success.radius href="#" data-reveal-id="callmebackModal" Позвонить Мне!
+
+        .large-6.columns
+          .panel.callout.radius
+            div id="map" style="width:300px; height:260px"
+      =="</div>"      
+    -else
+      =="<div id='panel2-#{i}' class='content'>"
+      .row
+        .large-6.columns
+          ul.no-bullet
+            li=="<h3> Салон #{@contacts[i][:name]} </h3>"
+            li=="<h4 class='subheader'> #{@contacts[i][:city]} </h4>"
+            li=="<p> #{@contacts[i][:adress]}"
+            li.fn=="Тел: <span class='fn'>#{@contacts[i][:phone]}</span>"
+            li=="Email: <span class='fn'>#{@contacts[i][:email]}</span>"
+          a.small.button.success.radius href="#" data-reveal-id="callmebackModal" Позвонить Мне!
+
+        .large-6.columns
+          .panel.callout.radius
+            div id="map" style="width:300px; height:260px"
+
+      =="</div>"
+
+

@@ -15,7 +15,12 @@ function formRestore () {
     type: 'GET',
     cache: false,
     success: function () {
-      $(thisModal).load('/getsignupform');
+      if (thisModal === 'firstModal') {
+        $(thisModal).load('/geteyetest_form');
+      }
+      else {
+        $(thisModal).load('/getcallmeback_form');
+      }
     }
   });
 };
@@ -35,9 +40,7 @@ function FormAJAX (form, modal) {
       type :    "POST",
       data :    formData,
       success : function () {
-        $(thisModal).html('<p class="flash">Спасибо! Ваша заявка принята!</p>' 
-                              + '<a class="close-reveal-modal">&#215;</a>'
-                              ); 
+        $(thisModal).load('/thankyou'); 
         $('#testers').load('/eye_testers');
       }, 
       complete : function () {
@@ -45,6 +48,23 @@ function FormAJAX (form, modal) {
       }
     }) // End of AJAX request
 };
+
+$(".royalSlider").royalSlider({
+  imageScaleMode: 'fill',
+});
+
+
+            var map;
+
+            DG.then(function () {
+                map = DG.map('map', {
+                    "center": [54.98, 82.89],
+                    "zoom": 13
+                });
+
+                DG.marker([54.98, 82.89]).addTo(map).bindPopup('Вы кликнули по мне!');
+            });
+
 
 $(document).ready(function() {
 

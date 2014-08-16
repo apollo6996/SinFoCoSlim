@@ -19,7 +19,7 @@ module CallMeBackHelpers
 		@callbacks = CallMeBack.all
 	end
 
-	def signup
+	def signup_callmeback
 		@callback = CallMeBack.create(params[:eye_test])
 	end
 
@@ -28,7 +28,7 @@ end
 helpers CallMeBackHelpers
 
 post '/call_me_back' do 
-	if signup
+	if signup_callmeback
 		redirect to ("/")
 	end
 end
