@@ -4,16 +4,128 @@
 		"selected_items":
 		[
 			[
+				"i",
+				"i"
+			],
+			[
+				"panel",
+				"panel_count"
+			],
+			[
+				"pad",
+				"padding-bottom: "
+			],
+			[
+				"cont",
+				"contacts"
+			],
+			[
+				"le",
+				"left: "
+			],
+			[
+				"c",
+				"css	.css() - single"
+			],
+			[
+				"sty",
+				"style( elem, name, value, extra )	jquery-1.7b2.js"
+			],
+			[
+				"te",
+				"text-decoration: "
+			],
+			[
+				"left",
+				"padding-left: "
+			],
+			[
+				"mar",
+				"margin-top: "
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"templ",
+				"template"
+			],
+			[
+				"callback",
+				"callbacks_requests"
+			],
+			[
+				"callb",
+				"callbacks"
+			],
+			[
+				"this",
+				"thisModal	addons.js"
+			],
+			[
+				"padd",
+				"padding-left: "
+			],
+			[
+				"max",
+				"max-width: "
+			],
+			[
+				"sing",
+				"single-box-shadow	Compass"
+			],
+			[
+				"complete",
+				"complete()	jquery.js"
+			],
+			[
+				"onc",
+				"onClick(event)	fastclick.js"
+			],
+			[
+				"eye",
+				"eye_testers"
+			],
+			[
+				"load",
+				"load	.load"
+			],
+			[
+				"html",
+				"html( value )	jquery-1.7b2.js"
+			],
+			[
+				"succe",
+				"successMsg	addons.js"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"suc",
+				"success(data, textStatus, jqXHR)	foundation.reveal.js"
+			],
+			[
+				"se",
+				"serialize	.serialize()"
+			],
+			[
+				"th",
+				"this	$(this)"
+			],
+			[
+				"sub",
+				"submit	submit"
+			],
+			[
 				"re",
-				"redirect"
+				"ready	$(document).ready"
 			],
 			[
 				"Ком",
 				"Комсомольский"
-			],
-			[
-				"i",
-				"if	if … end"
 			],
 			[
 				"do",
@@ -36,28 +148,8 @@
 				"EyeTestHelpers"
 			],
 			[
-				"eye",
-				"eye_test"
-			],
-			[
 				"E",
 				"EyeTest"
-			],
-			[
-				"pa",
-				"padding-top: "
-			],
-			[
-				"pad",
-				"padding-bottom: "
-			],
-			[
-				"padd",
-				"padding-top: "
-			],
-			[
-				"le",
-				"letter-spacing: "
 			],
 			[
 				"fo",
@@ -124,10 +216,6 @@
 				"Sinatra"
 			],
 			[
-				"cont",
-				"contact_path"
-			],
-			[
 				"con",
 				"contact"
 			],
@@ -155,31 +243,7 @@
 			"file": "views/home.slim",
 			"settings":
 			{
-				"buffer_size": 5663,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/sales.slim",
-			"settings":
-			{
-				"buffer_size": 380,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/show_testers.slim",
-			"settings":
-			{
-				"buffer_size": 813,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app.rb",
-			"settings":
-			{
-				"buffer_size": 1120,
+				"buffer_size": 3334,
 				"line_ending": "Unix"
 			}
 		},
@@ -187,24 +251,79 @@
 			"file": "eye_test.rb",
 			"settings":
 			{
-				"buffer_size": 821,
-				"line_ending": "Unix",
-				"name": "require"
+				"buffer_size": 781,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "call_me_back.rb",
+			"settings":
+			{
+				"buffer_size": 844,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/show_testers.slim",
+			"settings":
+			{
+				"buffer_size": 866,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app.rb",
+			"settings":
+			{
+				"buffer_size": 2612,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/nav_alt.slim",
+			"settings":
+			{
+				"buffer_size": 438,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/stylesheets/royalslider.css",
+			"settings":
+			{
+				"buffer_size": 4348,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "views/scss/_custom.scss",
 			"settings":
 			{
-				"buffer_size": 705,
+				"buffer_size": 2533,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "js/app.js",
+			"file": "views/sales.slim",
 			"settings":
 			{
-				"buffer_size": 374,
+				"buffer_size": 1880,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/tabs_contents.slim",
+			"settings":
+			{
+				"buffer_size": 536,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/addons.js",
+			"settings":
+			{
+				"buffer_size": 1506,
 				"line_ending": "Unix"
 			}
 		}
@@ -261,23 +380,42 @@
 	},
 	"file_history":
 	[
-		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/sales",
-		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/show_testers.slim",
-		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/eye_testers.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/.git/COMMIT_EDITMSG",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/js/app.js",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/callmeback_form.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/ty.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/js/addons.js",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/eyetest_form.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/bower_components/foundation/scss/foundation/components/_tabs.scss",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/scss/_settings.scss",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/Procfile",
+		"/etc/hosts",
 		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/Gemfile",
-		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/header.slim",
-		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/nav_big.slim",
 		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/signup_eyetesters.slim",
-		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/layout.slim",
-		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/bower_components/foundation/scss/foundation/components/_icon-bar.scss",
-		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/config.rb",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/signup_body.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/assets/stylesheets/flexy-menu.css",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/js/flexy-menu.js",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/nav_alt.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/app.rb",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/scss/_custom.scss",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/nav_big.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/js/dat-menu.js",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/scss/fontawesome/_variables.scss",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/assets/stylesheets/app.css",
 		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/scss/app.scss",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/assets/stylesheets/dat-menu.css",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/bower_components/foundation/scss/foundation/components/_icon-bar.scss",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/bower_components/foundation/scss/foundation/components/_global.scss",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/eye_test.rb",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/sales.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/header.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/show_testers.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/sales",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/eye_testers.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/layout.slim",
+		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/config.rb",
 		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/templ.slim",
 		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/scss/fontawesome/_core.scss",
-		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/js/app.js",
-		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/assets/stylesheets/app.css",
-		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/.git/COMMIT_EDITMSG",
-		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/bower_components/foundation/scss/foundation/components/_global.scss",
 		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/bower_components/foundation/js/foundation.js",
 		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/bower_components/foundation/scss/foundation/_settings.scss",
 		"/Users/Vault/RubyProjects/sinatra/SinFoCoSlim/views/index2.erb",
@@ -380,6 +518,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"margin-top:",
+			"Overflow",
+			"menu",
+			"font-family",
 			"icon-bar",
 			"icon-bar-icon-size",
 			"icon-size",
@@ -534,7 +676,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -542,15 +684,15 @@
 					"file": "views/home.slim",
 					"settings":
 					{
-						"buffer_size": 5663,
+						"buffer_size": 3334,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								405,
-								405
+								1314,
+								1314
 							]
 						],
 						"settings":
@@ -560,32 +702,56 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 82.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "views/sales.slim",
+					"file": "eye_test.rb",
 					"settings":
 					{
-						"buffer_size": 380,
+						"buffer_size": 781,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								139,
-								139
+								509,
+								500
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "call_me_back.rb",
+					"settings":
+					{
+						"buffer_size": 844,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								531,
+								531
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -594,58 +760,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "views/show_testers.slim",
 					"settings":
 					{
-						"buffer_size": 813,
+						"buffer_size": 866,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								284,
-								284
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 3,
-					"file": "app.rb",
-					"settings":
-					{
-						"buffer_size": 1120,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								979,
-								979
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -657,52 +789,53 @@
 				},
 				{
 					"buffer": 4,
-					"file": "eye_test.rb",
+					"file": "app.rb",
 					"settings":
 					{
-						"buffer_size": 821,
+						"buffer_size": 2612,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								821,
-								821
+								121,
+								121
 							]
 						],
 						"settings":
 						{
-							"auto_name": "require",
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1116.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "views/scss/_custom.scss",
+					"file": "views/nav_alt.slim",
 					"settings":
 					{
-						"buffer_size": 705,
+						"buffer_size": 438,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								702,
-								702
+								200,
+								200
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -712,25 +845,144 @@
 				},
 				{
 					"buffer": 6,
-					"file": "js/app.js",
+					"file": "assets/stylesheets/royalslider.css",
 					"settings":
 					{
-						"buffer_size": 374,
+						"buffer_size": 4348,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								359,
-								359
+								2581,
+								2592
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 7,
+					"file": "views/scss/_custom.scss",
+					"settings":
+					{
+						"buffer_size": 2533,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								244,
+								244
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "views/sales.slim",
+					"settings":
+					{
+						"buffer_size": 1880,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								431,
+								431
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "views/tabs_contents.slim",
+					"settings":
+					{
+						"buffer_size": 536,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								523,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "js/addons.js",
+					"settings":
+					{
+						"buffer_size": 1506,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1395,
+								1395
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 10.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -767,7 +1019,7 @@
 		"cols":
 		[
 			0.0,
-			0.530983944714,
+			0.514466583603,
 			1.0
 		],
 		"rows":

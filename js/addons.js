@@ -15,7 +15,7 @@ function formRestore () {
     type: 'GET',
     cache: false,
     success: function () {
-      if (thisModal === 'firstModal') {
+      if (thisModal == $('.div:contains("firstModal")')) {
         $(thisModal).load('/geteyetest_form');
       }
       else {

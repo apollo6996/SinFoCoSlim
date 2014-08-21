@@ -106,8 +106,13 @@ end
 
 set :public_folder, 'assets'
 
+
 get '/' do
   slim :home
+end
+
+get '/admin' do
+  slim :'admin/admin'
 end
 
 get '/geteyetest_form' do

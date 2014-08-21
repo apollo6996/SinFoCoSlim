@@ -1,0 +1,33 @@
+doctype html
+html.no-js lang="en" 
+  head
+    meta charset="utf-8"
+    meta content="width=device-width, initial-scale=1.0" name="viewport"
+    title Оптика АйВита. Сеть салонов оптики г. Архангельск, г. Северодвинск, г. Мирный Архангельской области
+    link rel="stylesheet" href="/stylesheets/app.css"
+    link rel="stylesheet" href="/stylesheets/foundation-icons.css"
+    link rel="stylesheet" href="/stylesheets/royalslider.css"
+    link rel="stylesheet" href="/stylesheets/RSskins/minimal-white/rs-minimal-white.css"
+    link rel="stylesheet" href="/stylesheets/flexy-menu.css"
+
+  body
+    header
+      == slim :nav_alt 
+
+    .row#testers
+      .large-12.columns
+        <center>
+        == slim :eye_testers
+        </center>
+
+    script  src="/bower_components/jquery/dist/jquery.js"
+
+    script  src="/bower_components/foundation/js/foundation.js"
+    script  src="/bower_components/foundation/js/foundation/foundation.alert.js"
+    script  src="/js/jquery.sticky.js"
+    script  src="/js/flexy-menu.js"
+    script  src="/js/jquery.royalslider.min.js"
+    script  src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full" data-id="dgLoader"
+    script  src="/js/addons.js"
+    script  src="/js/app.js"
+    script  src="/js/modernizr.custom.50878.js"

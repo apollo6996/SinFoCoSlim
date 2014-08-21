@@ -33,16 +33,18 @@ html.no-js lang="en"
         </center>
 
     .row
-      .large-12.columns
+      #addreses.large-12.columns
+        hr
+        == slim :addreses
+
+    .row
+      #sales.large-12.columns
         hr
         == slim :sales
 
     .row
       .large-12.columns
-        .panel
           
-
-
           /! ********** EYE TESTER SIGN UP MODAL ********
           <div id="firstModal" class="reveal-modal small" data-reveal>
             == slim :eyetest_form
@@ -53,24 +55,6 @@ html.no-js lang="en"
           <div id="callmebackModal" class="reveal-modal small" data-reveal>
             == slim :callmeback_form
           </div>
-
-
-          h3 We&rsquo;re stoked you want to try Foundation!
-          p To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.
-          p Once you've exhausted the fun in this document, you should check out:
-          .row
-            .large-4.medium-4.columns
-              p
-                a href="http://foundation.zurb.com/docs"  Foundation Documentation 
-                | Everything you need to know about using the framework.
-            .large-4.medium-4.columns
-              p
-                a href="http://github.com/zurb/foundation"  Foundation on Github  
-                | Latest code, issue reports, feature requests and more.
-            .large-4.medium-4.columns
-              p
-                a href="http://twitter.com/foundationzurb"  @foundationzurb
-                | Ping do us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).
 
 
 
