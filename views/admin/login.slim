@@ -1,0 +1,22 @@
+doctype html
+html.no-js lang="en" 
+  head
+    meta charset="utf-8"
+    meta content="width=device-width, initial-scale=1.0" name="viewport"
+    title Оптика АйВита. Сеть салонов оптики г. Архангельск, г. Северодвинск, г. Мирный Архангельской области
+    link rel="stylesheet" href="/stylesheets/app.css"
+  body
+    .row
+      .large-3.large-centered.columns
+        img.logo src="../images/logo.png"
+    .row
+      .large-6.large-centered.columns
+        form.centered action="/auth/login" method="POST"
+          fieldset
+            legend Авторизация
+            label Логин: 
+            input type="text" name="user[username]" placeholder="Введите Логин"
+            label Пароль: 
+            input type="password" name="user[password]" placeholder="Введите Пароль"
+            br
+            input.small.radius.button.expand type="submit" value="Войти"

@@ -45,7 +45,7 @@ end
 
 delete '/eye_testers/:id' do 
   EyeTest.get(params[:id]).destroy
-  redirect to ("/")
+  redirect to ("/tickets")
 end
 
 

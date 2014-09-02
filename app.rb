@@ -4,11 +4,50 @@ require "sinatra/flash"
 require "sinatra/assetpack"
 require "compass"
 require "slim"
+require "warden"
+require "bcrypt"
+require "font-awesome-sass"
 require "./eye_test"
 require "./call_me_back"
-require "font-awesome-sass"
+require "./users"
+
+set :raise_errors, true
+set :show_exceptions, true
 
 enable :sessions
+set :session_secret, "j1U*ds@32$-U9i0oPgG-=m.$45R@%e42"
+
+use Warden::Manager do |config|
+  config.serialize_into_session{ |user| user.id }
+  config.serialize_from_session{ |id|   User.get(id) }
+
+  config.scope_defaults :default,
+    strategies: [:password],
+    action: '/auth/unauthenticated'
+  config.failure_app = self
+end
+
+Warden::Manager.before_failure do |env,opts|
+  env['REQUEST_METHOD'] = 'POST'
+end
+
+Warden::Strategies.add(:password) do
+  def valid?
+    params['user']['username'] && params['user']['password']
+  end
+
+  def authenticate!
+    user = User.first(username: params['user']['username'])
+    if user.nil?
+      fail!("The username you entered does not exist.")
+    elsif user.authenticate(params['user']['password'])
+      success!(user)
+    else
+      fail!("Could not log in")
+    end
+  end
+
+end
 
 helpers do 
 
@@ -104,15 +143,28 @@ before do
   set_contacts
 end
 
-set :public_folder, 'assets'
+def choose_name(username)  
+  which_username = username
+  case which_username
+    when 'admin'
+      {:showroom_index => 0..4}
+    when 'gallery'
+      {:showroom_index => 0..1}
+    when 'k6'
+      {:showroom_index => 1}
+    when 'mayak'
+      {:showroom_index => 2}
+    when 'plaza'
+      {:showroom_index => 3}
+    when 'city'
+      {:showroom_index => 4}
+  end
+end
 
+set :public_folder, 'assets'
 
 get '/' do
   slim :home
-end
-
-get '/admin' do
-  slim :'admin/admin'
 end
 
 get '/geteyetest_form' do
@@ -127,7 +179,47 @@ get '/thankyou' do
   slim :ty
 end
 
-get '/template' do 
-  slim :templ
+get '/auth/login' do
+  slim :'admin/login'
+end
+
+get '/admin' do
+    env['warden'].authenticate!
+    @current_user = env['warden'].user
+    @username = @current_user.username
+    if @username == 'admin'
+      slim :'admin/admin', :layout => :'admin/admin_layout'
+    else
+      slim :'admin/tickets', :layout => :'admin/admin_layout'
+    end
+end
+
+post '/auth/login' do
+  env['warden'].authenticate!
+
+  if session[:return_to].nil?
+    redirect '/admin'
+  else
+    redirect session[:return_to]
+  end
+
+end
+
+get '/auth/logout' do
+  env['warden'].raw_session.inspect
+  env['warden'].logout
+  redirect '/'
+end
+
+post '/auth/unauthenticated' do
+  session[:return_to] = env['warden.options'][:attempted_path]
+  puts env['warden.options'][:attempted_path]
+  redirect '/auth/login'
+end
+
+get '/protected' do
+  env['warden'].authenticate!
+  @current_user = env['warden'].user
+  erb :protected
 end
 

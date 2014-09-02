@@ -1,0 +1,20 @@
+section
+  .row
+    .large-8.offset-4.columns
+    -if @users.any?
+      table
+        thead
+          tr
+            th Имя Пользователя
+            th Номер Телефона
+            th Привязанные салоны
+            th Действие
+        tbody
+          - @users.all(choose_name(@username)).each do | user |
+            tr
+              td #{user.username}
+              td #{user.password}
+              td== @showrooms[user.showroom_index.to_i]
+
+    - else
+      h1 Нет ни одного пользователя!

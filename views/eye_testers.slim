@@ -1,33 +1,23 @@
-doctype html
-html.no-js lang="en" 
-  head
-    meta charset="utf-8"
-    meta content="width=device-width, initial-scale=1.0" name="viewport"
-    title Оптика АйВита. Сеть салонов оптики г. Архангельск, г. Северодвинск, г. Мирный Архангельской области
-    link rel="stylesheet" href="/stylesheets/app.css"
-    link rel="stylesheet" href="/stylesheets/foundation-icons.css"
-
-  body
-    section
-      .row
-        .large-8.offset-4.columns
-        -if @eye_testers.any?
-          table
-            thead
-              tr
-                th Имя
-                th Номер Телефона
-                th Желаемый Салон Обслуживания
-                th Действие
-            tbody
-            - @eye_testers.each do | tester |
-                tr
-                  td #{tester.name}
-                  td #{tester.phone}
-                  td== @showrooms[tester.showroom_index.to_i]
-                  td 
-                    form action="/eye_testers/#{tester.id}" method="POST" 
-                      input type="hidden" name="_method" value="DELETE"
-                      input.tiny.radius.button type="submit" value="Удалить запись" 
-        - else
-          h1 База записей на проверку зрения пуста!
+section
+  .row
+    .large-8.offset-4.columns
+    -if @eye_testers.any?
+      table
+        thead
+          tr
+            th Имя
+            th Номер Телефона
+            th Желаемый Салон Обслуживания
+            th Действие
+        tbody
+          - @eye_testers.all(choose_name(@username)).each do | tester |
+            tr
+              td #{tester.name}
+              td #{tester.phone}
+              td== @showrooms[tester.showroom_index.to_i]
+              td 
+                form action="/eye_testers/#{tester.id}" method="POST" 
+                  input type="hidden" name="_method" value="DELETE"
+                  input.tiny.radius.button type="submit" value="Удалить запись" 
+    -else
+      h1 База записей на проверку зрения пуста!

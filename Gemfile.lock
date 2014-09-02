@@ -83,11 +83,14 @@ GEM
     temple (0.6.8)
     tilt (1.4.1)
     uuidtools (2.1.4)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt
   compass
   data_mapper
   dm-core
@@ -100,3 +103,4 @@ DEPENDENCIES
   slim
   sqlite3
   tilt (~> 1.3, >= 1.3.4)
+  warden
