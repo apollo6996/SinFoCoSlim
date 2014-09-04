@@ -63,11 +63,11 @@ helpers do
 
   def set_short_showrooms
     @short_showrooms = {
-      @showrooms[0] => "Галерея",
-      @showrooms[1] => "Комсомольский",
-      @showrooms[2] => "Маяк",
-      @showrooms[3] => "Плаза",
-      @showrooms[4] => "Сити"
+      @showrooms[0] => '"Галерея"',
+      @showrooms[1] => '"Комсомольский"',
+      @showrooms[2] => '"Маяк"',
+      @showrooms[3] => '"Плаза"',
+      @showrooms[4] => '"Сити"'
     }
   end
 
@@ -181,6 +181,13 @@ end
 
 get '/auth/login' do
   slim :'admin/login'
+end
+
+get '/tickets' do
+  env['warden'].authenticate!
+  @current_user = env['warden'].user
+  @username = @current_user.username
+  slim :'admin/tickets', :layout => :'admin/admin_layout'
 end
 
 get '/admin' do

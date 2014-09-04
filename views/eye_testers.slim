@@ -1,23 +1,20 @@
-section
-  .row
-    .large-8.offset-4.columns
-    -if @eye_testers.any?
-      table
-        thead
-          tr
-            th Имя
-            th Номер Телефона
-            th Желаемый Салон Обслуживания
-            th Действие
-        tbody
-          - @eye_testers.all(choose_name(@username)).each do | tester |
-            tr
-              td #{tester.name}
-              td #{tester.phone}
-              td== @showrooms[tester.showroom_index.to_i]
-              td 
-                form action="/eye_testers/#{tester.id}" method="POST" 
-                  input type="hidden" name="_method" value="DELETE"
-                  input.tiny.radius.button type="submit" value="Удалить запись" 
-    -else
-      h1 База записей на проверку зрения пуста!
+-if @eye_testers.any?
+  table
+    thead
+      tr
+        th Имя
+        th Номер Телефона
+        th Желаемый Салон Обслуживания
+        th Действие
+    tbody
+      - @eye_testers.all(choose_name(@username)).each do | tester |
+        tr
+          td #{tester.name}
+          td #{tester.phone}
+          td== @showrooms[tester.showroom_index.to_i]
+          td 
+            form action="/eye_testers/#{tester.id}" method="POST" 
+              input type="hidden" name="_method" value="DELETE"
+              input.tiny.radius.button type="submit" value="Удалить запись" 
+-else
+  h1 База записей на проверку зрения пуста!
