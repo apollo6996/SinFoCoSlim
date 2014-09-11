@@ -8,20 +8,22 @@ class Sales
   include DataMapper::Resource
   property :id,              Serial
   property :header,          String
-  property :bodysale,        String
-  property :showroom_index, Integer
+  property :deadline,        String
+  property :bodysale,        Text
+  property :showroom_index,  Integer
 end
 
 DataMapper.finalize
+DataMapper.auto_upgrade!
 
 module SalesHelpers 
 
   def show_sales
-    @sales = EyeTest.all
+    @sales = Sales.all
   end
 
   def create_sale
-    @new_sale = EyeTest.create(params[:sales])
+    @new_sale = Sales.create(params[:sales])
   end
 
 end
@@ -35,8 +37,11 @@ post '/create_sales' do
 end
 
 get '/sales' do
+  env['warden'].authenticate!
+  @current_user = env['warden'].user
+  @username = @current_user.username
   show_sales
-  slim :sales
+  slim :'admin/sales', :layout => :'admin/admin_layout'
 end
 
 get '/sales/:id' do

@@ -39,3 +39,20 @@ module UsersHelpers
 end
 
 helpers UsersHelpers
+
+get '/users' do
+  env['warden'].authenticate!
+  @current_user = env['warden'].user
+  @username = @current_user.username
+  if @username == 'admin'
+  	show_users
+    slim :'admin/users', :layout => :'admin/admin_layout'
+  else
+    redirect '/tickets'
+  end
+end
+
+delete '/users/:id' do 
+  User.get(params[:id]).destroy
+  redirect to ("/users")
+end

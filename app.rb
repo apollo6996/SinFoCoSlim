@@ -10,6 +10,7 @@ require "font-awesome-sass"
 require "./eye_test"
 require "./call_me_back"
 require "./users"
+require "./sales"
 
 set :raise_errors, true
 set :show_exceptions, true
@@ -149,7 +150,7 @@ def choose_name(username)
     when 'admin'
       {:showroom_index => 0..4}
     when 'gallery'
-      {:showroom_index => 0..1}
+      {:showroom_index => 0}
     when 'k6'
       {:showroom_index => 1}
     when 'mayak'

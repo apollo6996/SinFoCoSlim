@@ -1,0 +1,42 @@
+section
+  .row
+    .large-7.columns
+      fieldset
+        legend Добавление нового спецпредложения 
+        form id="newSale" method="POST" action="/create_sales"
+          div.row
+            div.large-12.columns
+              label for="header" type="text" 
+                | Заголовок Спецпредложения
+                input type="text" name="sales[header]" placeholder="Введите заголовок акции. Например: Скидка 50% на оправы Ray Ban!"
+          div.row
+            div.large-12.columns
+              label for="deadline" type="text" 
+                | Срок Проведения
+                input type="text" name="sales[deadline]" placeholder="Укажите срок проведения акции. Например: с 1 сентября по 5 октября"
+          div.row
+            div.large-12.columns
+              label for="bodysale" type="text" 
+                | Описание
+                textarea type="text" name="sales[bodysale]" rows="5" placeholder="Опишите условия проведения спецпредложения:"
+          .row
+            div.large-12.columns
+              
+              - if @username == 'admin'
+                label for="showroom" type="text" 
+                  | Салон спецпредложения
+                - @showrooms.each do |i| 
+                    input type="radio" name="sales[showroom_index]" value="#{@showrooms.index(i)}" 
+                    label #{@short_showrooms[i]}
+              -else
+                - @short_showrooms.values_at(@showrooms[choose_name(@username)[:showroom_index]]).each do |i|
+                    input type="hidden" name="sales[showroom_index]" value="#{i.index(i)}" 
+                    
+
+          .row             
+            .large-12.columns
+              input.medium.radius.button.expand onclick="FormAJAX(eyeForm, firstModal)" type="submit" value="Добавить Спецпредложение!"
+    .large-5.columns 
+      fieldset
+        legend Рекомендации по составлению Акции
+        p Вся мудрость поколений маркетологов будет содержатся тут :)

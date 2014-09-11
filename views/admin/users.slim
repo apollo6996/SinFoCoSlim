@@ -1,20 +1,25 @@
 section
   .row
     .large-8.offset-4.columns
-    -if @users.any?
-      table
-        thead
-          tr
-            th Имя Пользователя
-            th Номер Телефона
-            th Привязанные салоны
-            th Действие
-        tbody
-          - @users.all(choose_name(@username)).each do | user |
+    <center>
+    fieldset
+      legend Пользователи  
+      -if @users.any?
+        table
+          thead
             tr
-              td #{user.username}
-              td #{user.password}
-              td== @showrooms[user.showroom_index.to_i]
+              th Имя Пользователя
+              th Номер Телефона
+              th Действие
+          tbody
+            - @users.each do | user |
+              tr
+                td #{user.username}
+                td #{user.password}
+                td 
+                  form action="/users/#{user.id}" method="POST" 
+                    input type="hidden" name="_method" value="DELETE"
+                    input.tiny.radius.button type="submit" value="Удалить запись" 
 
-    - else
-      h1 Нет ни одного пользователя!
+      - else
+        h1 Нет ни одного пользователя!
