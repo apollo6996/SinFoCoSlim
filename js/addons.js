@@ -10,6 +10,20 @@ function checkDB () {
   
 };
 
+function tyForm (form) {
+  prevent(form);
+  var url = $(form).attr("action");
+  var formData = $(form).serialize();
+    $.ajax(url, {
+      type :    "POST",
+      data :    formData,
+      success : function () {
+          $('#newSale').load('/thankyou_sale'); 
+          $('#newImprove').load('/thankyou_improve');
+      } 
+    }) // End of AJAX request
+};
+
 function formRestore () {
   $.ajax({
     type: 'GET',
@@ -54,16 +68,16 @@ $(".royalSlider").royalSlider({
 });
 
 
-            var map;
+var map;
 
-            DG.then(function () {
-                map = DG.map('map', {
-                    "center": [54.98, 82.89],
-                    "zoom": 13
-                });
+DG.then(function () {
+    map = DG.map('map', {
+        "center": [40.53, 64.53],
+        "zoom": 13
+    });
 
-                DG.marker([54.98, 82.89]).addTo(map).bindPopup('Вы кликнули по мне!');
-            });
+    DG.marker([40.53, 64.53]).addTo(map).bindPopup('Вы кликнули по мне!');
+});
 
 
 $(document).ready(function() {

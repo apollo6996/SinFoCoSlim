@@ -1,16 +1,33 @@
 h2 Спецпредложения
 
-h4.undline Постоянные спецпредложения
+h4.subheader Постоянные спецпредложения
 h5.subheader Данные акции действительны во всех салонах нашей сети, без ограничения по времени действия!
+
+.panel
+  h3 Вторые очки в ПОДАРОК!
+  p При заказе очков от 2000 руб. вторые очки из наличия - в подарок!
 
 hr
 
-h4.undline Ограниченные спецпредложения
+h4.subheader Ограниченные спецпредложения
 h5.subheader Ограниченные акции и скидки в отдельных салонах
 
 ul.no-bullet
-	li.panel
-		h3 <strong>Скидка 70%</strong> на вторые оправы из детской коллекции!
-		h5 Срок проведения: <strong>с 1 сентября по 15 октября</strong>
-		h5 Салоны проведения акции: <blockquote> "Галерея" </blockquote>
-		p <a href="#addreses">Узнайте контакты салона!</a>
+  -if @sales.any?
+    - @sales.each do |sale|
+      li.panel.callout.radius 
+        h3.redbold 
+          i.fi-star
+          |&nbsp #{sale.header} 
+        h5 Срок проведения: <strong>#{sale.deadline}</strong>
+        h5 Салон проведения акции: #{@short_showrooms[@showrooms[sale.showroom_index]]}
+        p
+          i.fa.fa-info-circle  
+          |  Описание акции: <br> #{sale.bodysale}
+        p 
+          |Узнайте подробности по телефону: 
+          i.fa.fa-phone &nbsp 
+          <span class='fn'>#{@contacts[sale.showroom_index + 1][:phone]} </span>
+  -else
+    h4 На данный момент спецпредложения салонов отсутствуют.
+    h5 Подпишитесь на рассылку и будьте в курсе новых акций!

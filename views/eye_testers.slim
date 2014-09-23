@@ -11,7 +11,7 @@
         tr
           td #{tester.name}
           td #{tester.phone}
-          td== @showrooms[tester.showroom_index.to_i]
+          td== @short_showrooms[@showrooms[tester.showroom_index.to_i]]
           td 
             form action="/eye_testers/#{tester.id}" method="POST" 
               input type="hidden" name="_method" value="DELETE"

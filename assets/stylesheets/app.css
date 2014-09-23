@@ -8057,53 +8057,100 @@ th.hide-for-touch {
   }
 }
 /* line 10, ../../views/scss/_custom.scss */
+.panel.callout h3.redbold {
+  font-weight: bold;
+  color: #e9405a;
+}
+
+/* line 16, ../../views/scss/_custom.scss */
+.blockit {
+  display: inline-block;
+  padding-top: 50px;
+}
+
+/* line 20, ../../views/scss/_custom.scss */
+.footer {
+  width: 100%;
+  min-height: 100px;
+}
+/* line 23, ../../views/scss/_custom.scss */
+.footer img {
+  padding-top: 25px;
+}
+
+/* line 28, ../../views/scss/_custom.scss */
+p.doublefooter {
+  padding-top: 10px;
+}
+
+/* line 32, ../../views/scss/_custom.scss */
+.promoEye {
+  display: inline-block;
+  float: left;
+  width: 100%;
+  min-height: 90px;
+  background-image: url("../images/bg-promo.jpg");
+}
+/* line 38, ../../views/scss/_custom.scss */
+.promoEye h4 {
+  padding-top: 15px;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
+  color: #ffe981;
+}
+/* line 47, ../../views/scss/_custom.scss */
+.promoEye a {
+  margin-left: 86px;
+  margin-top: 20px;
+}
+
+/* line 54, ../../views/scss/_custom.scss */
 a.nav-text:hover {
   color: #fff;
 }
 
-/* line 15, ../../views/scss/_custom.scss */
+/* line 59, ../../views/scss/_custom.scss */
 .centered {
   padding-top: 10%;
 }
 
-/* line 19, ../../views/scss/_custom.scss */
+/* line 63, ../../views/scss/_custom.scss */
 h4.undline {
   text-decoration: underline;
 }
 
-/* line 23, ../../views/scss/_custom.scss */
+/* line 67, ../../views/scss/_custom.scss */
 span.fn {
   color: #008cba;
 }
 
-/* line 27, ../../views/scss/_custom.scss */
+/* line 71, ../../views/scss/_custom.scss */
 li.fn {
   padding-bottom: 10px;
 }
 
-/* line 31, ../../views/scss/_custom.scss */
+/* line 75, ../../views/scss/_custom.scss */
 .bg_white {
   background-color: #fff;
 }
 
-/* line 35, ../../views/scss/_custom.scss */
+/* line 79, ../../views/scss/_custom.scss */
 .border-bot {
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
   background-color: #E9405A;
   border-bottom: 3px solid #bc364a;
 }
-/* line 39, ../../views/scss/_custom.scss */
+/* line 83, ../../views/scss/_custom.scss */
 .border-bot:hover {
   background-color: #bc364a;
 }
 
-/* line 44, ../../views/scss/_custom.scss */
+/* line 88, ../../views/scss/_custom.scss */
 .logo-desription {
   font-size: 13px;
   padding-top: 0px;
 }
 
-/* line 49, ../../views/scss/_custom.scss */
+/* line 93, ../../views/scss/_custom.scss */
 .logo {
   display: -moz-inline-stack;
   display: inline-block;
@@ -8112,52 +8159,52 @@ li.fn {
   zoom: 1;
   *display: inline;
   padding-top: 10px;
-  padding-left: 12%;
+  padding-left: 10%;
 }
 
-/* line 55, ../../views/scss/_custom.scss */
+/* line 99, ../../views/scss/_custom.scss */
 .nav-text {
   color: #000;
 }
 
-/* line 59, ../../views/scss/_custom.scss */
+/* line 103, ../../views/scss/_custom.scss */
 .border {
   border-bottom: 1px solid #ccc;
 }
 
-/* line 63, ../../views/scss/_custom.scss */
+/* line 107, ../../views/scss/_custom.scss */
 #menu_nav {
   z-index: 9999;
 }
 
-/* line 67, ../../views/scss/_custom.scss */
+/* line 111, ../../views/scss/_custom.scss */
 #firstModal {
   background: opacity(0.5);
 }
 
-/* line 72, ../../views/scss/_custom.scss */
+/* line 116, ../../views/scss/_custom.scss */
 i.icon-lg {
   font-size: 36px;
 }
-/* line 75, ../../views/scss/_custom.scss */
+/* line 119, ../../views/scss/_custom.scss */
 i.icon-md {
   font-size: 24px;
 }
-/* line 78, ../../views/scss/_custom.scss */
+/* line 122, ../../views/scss/_custom.scss */
 i.icon-sm {
   font-size: 21px;
 }
 
-/* line 85, ../../views/scss/_custom.scss */
+/* line 129, ../../views/scss/_custom.scss */
 #full-width-slider {
   width: 100%;
   color: #000;
 }
-/* line 89, ../../views/scss/_custom.scss */
+/* line 133, ../../views/scss/_custom.scss */
 #full-width-slider a.medium.radius.button.border-bot {
   left: 21%;
 }
-/* line 93, ../../views/scss/_custom.scss */
+/* line 137, ../../views/scss/_custom.scss */
 #full-width-slider .infoBlock {
   position: absolute;
   top: 40px;
@@ -8168,7 +8215,7 @@ i.icon-sm {
   overflow: hidden;
   padding: 50px;
 }
-/* line 103, ../../views/scss/_custom.scss */
+/* line 147, ../../views/scss/_custom.scss */
 #full-width-slider .infoBlockLeftBlack {
   color: #FFF;
   background: #000;
@@ -8176,11 +8223,11 @@ i.icon-sm {
   left: 60%;
   right: auto;
 }
-/* line 109, ../../views/scss/_custom.scss */
+/* line 153, ../../views/scss/_custom.scss */
 #full-width-slider .infoBlockLeftBlack div.rsContent {
   left: 60%;
 }
-/* line 113, ../../views/scss/_custom.scss */
+/* line 157, ../../views/scss/_custom.scss */
 #full-width-slider .infoBlock h4 {
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
   color: #fff;
@@ -8190,7 +8237,7 @@ i.icon-sm {
   margin: 0;
   padding-bottom: 3px;
 }
-/* line 122, ../../views/scss/_custom.scss */
+/* line 166, ../../views/scss/_custom.scss */
 #full-width-slider .infoBlock h3 {
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
   color: #fff;
@@ -8199,7 +8246,7 @@ i.icon-sm {
   margin: 0;
   text-align: center;
 }
-/* line 130, ../../views/scss/_custom.scss */
+/* line 174, ../../views/scss/_custom.scss */
 #full-width-slider .infoBlock p {
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
   font-size: 16px;
@@ -8209,27 +8256,27 @@ i.icon-sm {
 }
 
 @media screen and (min-width: 960px) and (min-height: 660px) {
-  /* line 142, ../../views/scss/_custom.scss */
+  /* line 186, ../../views/scss/_custom.scss */
   .heroSlider .rsOverflow,
   .royalSlider.heroSlider {
     height: 520px !important;
   }
 }
 @media screen and (min-width: 960px) and (min-height: 1000px) {
-  /* line 149, ../../views/scss/_custom.scss */
+  /* line 193, ../../views/scss/_custom.scss */
   .heroSlider .rsOverflow,
   .royalSlider.heroSlider {
     height: 660px !important;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 800px) {
-  /* line 155, ../../views/scss/_custom.scss */
+  /* line 199, ../../views/scss/_custom.scss */
   .royalSlider.heroSlider,
   .royalSlider.heroSlider .rsOverflow {
     height: 300px !important;
   }
 
-  /* line 158, ../../views/scss/_custom.scss */
+  /* line 202, ../../views/scss/_custom.scss */
   .infoBlock {
     padding: 10px;
     height: auto;
@@ -8241,7 +8288,7 @@ i.icon-sm {
     font-size: 12px;
   }
 
-  /* line 168, ../../views/scss/_custom.scss */
+  /* line 212, ../../views/scss/_custom.scss */
   .infoBlock h3 {
     font-size: 14px;
     line-height: 17px;

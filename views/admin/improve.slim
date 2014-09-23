@@ -1,0 +1,54 @@
+section
+  .row
+    .large-6.large-offset-3.columns
+      h3 Предложить Идею
+      p Оставьте пожалуйста свое предложение или идею о том, как вы считаете, можно дополнить и улучшить сайт. <br> Перед тем как отправить сообщение, прочитайте пожалуйста рекомендации, расположенные справа от формы. Спасибо! :)
+  .row
+    .large-7.columns
+      fieldset
+        legend Создание нового сообщения 
+        form id="newImprove" method="POST" action="/create_improve"
+          div.row
+            div.large-12.columns
+              label for="header" type="text" 
+                | Тема
+                input type="text" name="improve[header]" placeholder="Введите общую тему сообщения. Например: Добавление раздела"
+          div.row
+            div.large-12.columns
+              label for="section" type="text" 
+                | Категория
+                select name="improve[section]" placeholder="Выберите из списка наиболее подходящую категорию для сообщения"
+                  option value='1' Добавление раздела
+                  option value='2' Изменение внешнего вида
+                  option value='3' Добавление функциональности
+                  option value='4' Ошибки
+                  option value='5' Другое
+          div.row
+            div.large-12.columns
+              label for="bodyimprove" type="text" 
+                | Текст Сообщения
+                textarea type="text" name="improve[bodyimprove]" rows="5" placeholder="Опишите условия проведения спецпредложения:"
+          .row
+            div.large-12.columns
+              
+              - if @username == 'admin'
+                label for="showroom" type="text" 
+                  | Салон спецпредложения
+                - @showrooms.each do |i| 
+                    input type="radio" name="improve[showroom_index]" value="#{@showrooms.index(i)}" 
+                    label #{@short_showrooms[i]}
+              -else
+                - @short_showrooms.values_at(@showrooms[choose_name(@username)[:showroom_index]]).each do |i|
+                    input type="hidden" name="improve[showroom_index]" value="#{i.index(i)}" 
+                    
+          .row             
+            .large-12.columns
+              input.medium.radius.button.expand onclick="tyForm(newImprove)" type="submit" value="Отправить Сообщение!"
+    .large-5.columns 
+      fieldset
+        legend Рекомендации 
+        p При написании сообщения постарайтесь придерживаться следующих рекомендаций:
+        ul
+          li Предлагая внедрить новый раздел, объясните почему он нужен и как будет полезен. Какую функцию он будет выполнять? Какая информация должна содержатся в нем?
+          li Указывая на недостатки, постарайтесь как можно более подробно объяснить причину (личное мнение) и предложите решение.
+          li Если вы заметили ошибку или неправильную работу, опишите пожалуйста какие действия вы делали, перед тем как она возникла.

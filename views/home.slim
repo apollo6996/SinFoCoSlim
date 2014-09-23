@@ -28,16 +28,36 @@ html.no-js lang="en"
 
     .row
       #addreses.large-12.columns
-        hr
         == slim :addreses
+
+    .promoEye.th
+      .row
+        .large-6.columns
+          h4 Проверьте уровень своего зрения!
+          p Запишитесь на БЕСПЛАТНУЮ диагностику сейчас!
+        .large-6.columns    
+          a.medium.radius.button.border-bot href="#" data-reveal-id="firstModal" <i class="fa fa-sign-in"> &nbsp</i> Записаться на приём к специалисту.
 
     .row
       #sales.large-12.columns
         hr
         == slim :sales
 
+    .th.footer
+      .row
+        .large-3.columns
+          img src="images/logo_small.png"
+        .large-9.columns
+          .blockit
+            a href="#" Адреса Салонов | &nbsp
+            a href="#" Спецпредложения  | &nbsp
+            a href="#" Обратный Звонок   | &nbsp
+            a href="#" Запись на Проверку Зрения 
     .row
-      .large-12.columns
+        .large-12.columns
+          <center> 
+            p.doublefooter ООО "Айвита", 163000, г. Архангельск, ул. Комсомольская д.6, ИНН: 2901232120, ОГРН: 1122901026621
+          </center>
           
           /! ********** EYE TESTER SIGN UP MODAL ********
           <div id="firstModal" class="reveal-modal small" data-reveal>

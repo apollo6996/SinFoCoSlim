@@ -10,7 +10,7 @@ html.no-js lang="en"
   body
     header
     - if @username == "admin"
-      .icon-bar.five-up
+      .icon-bar.six-up
         a.item href="/admin"
           i.fi-thumbnails
           label Главная
@@ -23,17 +23,23 @@ html.no-js lang="en"
         a.item href="/users"
           i.fi-torsos-female-male
           label Пользователи
+        a.item href="/improve"
+          i.fa.fa-envelope
+          label Предложения
         a.item
           i.fi-graph-bar
           label Статистика
     - else
-      .icon-bar.two-up
+      .icon-bar.three-up
         a.item href="/tickets"
           i.fi-book-bookmark
           label Заявки
         a.item href="/sales"
           i.fa.fa-certificate
           label Спецпредложения
+        a.item href="/improve"
+          i.fa.fa-envelope
+          label Предложить Идею
 
     == yield      
 
@@ -41,6 +47,10 @@ html.no-js lang="en"
 
     script  src="/bower_components/foundation/js/foundation.js"
     script  src="/bower_components/foundation/js/foundation/foundation.alert.js"
+    script  src="/js/jquery.sticky.js"
+    script  src="/js/flexy-menu.js"
+    script  src="/js/jquery.royalslider.min.js"
+    script  src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full" data-id="dgLoader"
     script  src="/js/addons.js"
     script  src="/js/app.js"
     script  src="/js/modernizr.custom.50878.js"

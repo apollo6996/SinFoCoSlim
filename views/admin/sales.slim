@@ -1,5 +1,28 @@
 section
   .row
+    .large-10.large-offset-2.columns
+      h3 Текущие спецпредложения:
+      -if @sales.any?
+        table
+          thead
+            tr
+              th Спецпредложение (заголовок)
+              th Срок проведения
+              th Салон
+              th Действие
+          tbody
+            -@sales.each do |sale|
+              tr
+                td #{sale.header}
+                td #{sale.deadline}
+                td= @short_showrooms[@showrooms[sale.showroom_index]]
+                td
+                  form action="/sales/#{sale.id}" method="POST" 
+                    input type="hidden" name="_method" value="DELETE"
+                    input.tiny.radius.button type="submit" value="Удалить акцию"
+      -else
+        h2 Спецпредложения отсутствуют.
+  .row
     .large-7.columns
       fieldset
         legend Добавление нового спецпредложения 
@@ -32,10 +55,9 @@ section
                 - @short_showrooms.values_at(@showrooms[choose_name(@username)[:showroom_index]]).each do |i|
                     input type="hidden" name="sales[showroom_index]" value="#{i.index(i)}" 
                     
-
           .row             
             .large-12.columns
-              input.medium.radius.button.expand onclick="FormAJAX(eyeForm, firstModal)" type="submit" value="Добавить Спецпредложение!"
+              input.medium.radius.button.expand onclick="tyForm(newSale)" type="submit" value="Добавить Спецпредложение!"
     .large-5.columns 
       fieldset
         legend Рекомендации по составлению Акции

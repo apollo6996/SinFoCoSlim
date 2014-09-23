@@ -11,6 +11,7 @@ require "./eye_test"
 require "./call_me_back"
 require "./users"
 require "./sales"
+require "./improve"
 
 set :raise_errors, true
 set :show_exceptions, true
@@ -33,6 +34,7 @@ Warden::Manager.before_failure do |env,opts|
 end
 
 Warden::Strategies.add(:password) do
+
   def valid?
     params['user']['username'] && params['user']['password']
   end
@@ -142,6 +144,7 @@ before do
   show_testers
   show_callbacks_requests
   set_contacts
+  show_sales
 end
 
 def choose_name(username)  
@@ -180,6 +183,14 @@ get '/thankyou' do
   slim :ty
 end
 
+get '/thankyou_sale' do
+  slim :ty_sales
+end
+
+get '/thankyou_improve' do
+  slim :ty_improve
+end
+
 get '/auth/login' do
   slim :'admin/login'
 end
@@ -216,12 +227,14 @@ end
 get '/auth/logout' do
   env['warden'].raw_session.inspect
   env['warden'].logout
+  flash[:success] = "Successfully logged out"
   redirect '/'
 end
 
 post '/auth/unauthenticated' do
   session[:return_to] = env['warden.options'][:attempted_path]
   puts env['warden.options'][:attempted_path]
+  flash[:error] = env['warden'].message  || 'You must to login to continue'
   redirect '/auth/login'
 end
 

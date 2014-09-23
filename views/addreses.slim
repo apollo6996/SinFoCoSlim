@@ -28,7 +28,11 @@ p Выберите пожалуйста салон из вкладок ниже:
 
         .large-6.columns
           .panel.callout.radius
-            div id="map" style="width:300px; height:260px"
+            <a id="firmsonmap_biglink" href="http://maps.2gis.ru/#/?history=project/arkhangelsk/center/40.533681964448,64.531880455494/zoom/18/state/widget/id/6896665210443872/firms/6896665210443872">Перейти к большой карте</a>
+            <script charset="utf-8" type="text/javascript" src="http://firmsonmap.api.2gis.ru/js/DGWidgetLoader.js"></script>
+            <script charset="utf-8" type="text/javascript">new DGWidgetLoader({"borderColor":"#a3a3a3","width":"300","height":"260","wid":"395f328c4ad70964bc19356db8d1bdbd","pos":{"lon":"40.533681964448","lat":"64.531880455494","zoom":"16"},"opt":{"ref":"hidden","card":["schedule","payings"],"city":"arkhangelsk"},"org":[{"id":"6896665210443872"}]});</script>
+            <noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
+                        //div id="map" style="width:300px; height:260px"
       =="</div>"      
     -else
       =="<div id='panel2-#{i}' class='content'>"
