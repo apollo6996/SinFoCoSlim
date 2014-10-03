@@ -20,7 +20,7 @@ module CallMeBackHelpers
 	end
 
 	def signup_callmeback
-		@callback = CallMeBack.create(params[:eye_test])
+		@callback = CallMeBack.create(params[:callback])
 	end
 
 end
@@ -44,7 +44,7 @@ end
 
 delete '/callbacks_requests/:id' do 
   CallMeBack.get(params[:id]).destroy
-  redirect to ("/")
+  redirect to ("/tickets")
 end
 
 

@@ -7,13 +7,13 @@ form id="callMeBackForm" method="POST" action="/call_me_back"
     div.large-12.columns
       label for="name" type="text" 
         | Ваше Имя
-        input type="text" name="eye_test[name]" placeholder="Введите пожалуйста Ваше Имя:"
+        input type="text" name="callback[name]" placeholder="Введите пожалуйста Ваше Имя:"
   div.row
     div.large-12.columns
       label for="phone" type="text" 
         | Номер телефона
-        input type="number" name="eye_test[phone]" placeholder="Укажите Ваш контактный мобильный телефон:"
+        input type="number" name="callback[phone]" placeholder="Укажите Ваш контактный мобильный телефон:"
   div.large-12.columns
-    input.medium.radius.button.border-bot.expand onclick="FormAJAX(callMeBackForm, callmebackModal)" type="submit" value="Записаться на бесплатную проверку!" 
+    input.medium.radius.button.border-bot.expand onclick="FormAJAX(callMeBackForm, callmebackModal)" type="submit" value="Позвоните Мне!" 
 
 <a class="close-reveal-modal">&#215;</a>

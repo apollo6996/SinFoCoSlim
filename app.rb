@@ -16,8 +16,9 @@ require "./improve"
 set :raise_errors, true
 set :show_exceptions, true
 
-enable :sessions
-set :session_secret, "j1U*ds@32$-U9i0oPgG-=m.$45R@%e42"
+use Rack::Session::Pool, 
+session_secret: "j1U*ds@32$-U9i0oPgG-=m.$45R@%e42",
+expire_after: 302400
 
 use Warden::Manager do |config|
   config.serialize_into_session{ |user| user.id }
@@ -191,7 +192,7 @@ get '/thankyou_improve' do
   slim :ty_improve
 end
 
-get '/auth/login' do
+get '/login' do
   slim :'admin/login'
 end
 
@@ -213,10 +214,11 @@ get '/admin' do
     end
 end
 
-post '/auth/login' do
+post '/login' do
   env['warden'].authenticate!
 
   if session[:return_to].nil?
+    flash[:notice] = "Вы успешно вошли!"
     redirect '/admin'
   else
     redirect session[:return_to]
@@ -224,7 +226,7 @@ post '/auth/login' do
 
 end
 
-get '/auth/logout' do
+get '/logout' do
   env['warden'].raw_session.inspect
   env['warden'].logout
   flash[:success] = "Successfully logged out"
@@ -235,7 +237,7 @@ post '/auth/unauthenticated' do
   session[:return_to] = env['warden.options'][:attempted_path]
   puts env['warden.options'][:attempted_path]
   flash[:error] = env['warden'].message  || 'You must to login to continue'
-  redirect '/auth/login'
+  redirect '/login'
 end
 
 get '/protected' do

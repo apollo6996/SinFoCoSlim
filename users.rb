@@ -52,6 +52,14 @@ get '/users' do
   end
 end
 
+post '/newuser' do
+  if users_signup
+    redirect to ("/users")
+  else
+    "Ошибка создания пользователя"
+  end
+end
+
 delete '/users/:id' do 
   User.get(params[:id]).destroy
   redirect to ("/users")

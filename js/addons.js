@@ -29,12 +29,8 @@ function formRestore () {
     type: 'GET',
     cache: false,
     success: function () {
-      if (thisModal == $('.div:contains("firstModal")')) {
-        $(thisModal).load('/geteyetest_form');
-      }
-      else {
-        $(thisModal).load('/getcallmeback_form');
-      }
+        $('#firstModal').load('/geteyetest_form');
+        $('#callmebackModal').load('/getcallmeback_form');
     }
   });
 };
@@ -55,12 +51,13 @@ function FormAJAX (form, modal) {
       data :    formData,
       success : function () {
         $(thisModal).load('/thankyou'); 
-        $('#testers').load('/eye_testers');
+        //$('#testers').load('/eye_testers');
       }, 
       complete : function () {
         setTimeout('formRestore()', 5000);
       }
-    }) // End of AJAX request
+    })
+// End of AJAX request
 };
 
 $(".royalSlider").royalSlider({

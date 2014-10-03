@@ -41,6 +41,12 @@ html.no-js lang="en"
           i.fa.fa-envelope
           label Предложить Идею
 
+    -if flash[:notice]
+      data-alert.alert-box.success.radius 
+        == "#{flash[:notice]}" 
+        a.close href="#" 
+          | &times;
+
     == yield      
 
     script  src="/bower_components/jquery/dist/jquery.js"

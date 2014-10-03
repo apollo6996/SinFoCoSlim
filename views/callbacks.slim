@@ -1,0 +1,18 @@
+-if @callbacks.any?
+  table
+    thead
+      tr
+        th Имя
+        th Номер Телефона
+        th Действие
+    tbody
+      - @callbacks.each do | callback |
+        tr
+          td #{callback.name}
+          td #{callback.phone}
+          td 
+            form action="/callbacks_requests/#{callback.id}" method="POST" 
+              input type="hidden" name="_method" value="DELETE"
+              input.tiny.radius.button type="submit" value="Удалить запись" 
+-else
+  h4 Заявок на Обратный Звонок пока что нет.
