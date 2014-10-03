@@ -14,4 +14,5 @@ gem "sinatra-flash"
 gem "font-awesome-sass"
 gem "warden"
 gem "bcrypt"
-#gem "dm-sqlite-adapter", :group => :development
+gem "unicorn"
+gem "dm-sqlite-adapter", :group => :development
